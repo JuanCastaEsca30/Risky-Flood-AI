@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+    <title>Risky Flood - Iniciar Sesión</title>
+    
+</head>
+
+<body>
+    <section>
+        <div class="flex-container">
+            <div class="side-bar">
+                <!--
+                <div class="logo-container">
+                    <img src="mapa.jpg" class="logo" />
+                </div>
+                -->
+
+
+
+                <div class="informacion">
+                    <p>
+                        Proyecto creado por <strong>Diana Ríos Quiroz</strong> y
+                        <strong>Juan de Dios Castañeda Escamilla</strong> del grupo
+                        <strong>08</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="login-container">
+                <h1 class="titulo">Risky Flood AI</h1>
+                <h2>Iniciar Sesión</h2>
+                <div class="login-box">
+                    <form action="{{ url_for('login') }}" method="POST" class="login-form">
+                        <div class="input-group">
+                            <label for="usuario" class="label-login">Usuario:</label>
+                            <input type="text" name="usuario" placeholder="Usuario" required autofocus />
+                        </div>
+                        <div class="input-group">
+                            <label for="password" class="label-login">Contraseña:</label>
+                            <input type="password" name="password" placeholder="Contraseña" required />
+                        </div>
+                        <button type="submit" class="btn-login">Iniciar sesión</button>
+                    </form>
+                    <a href="{{url_for('registro')}}">¿No tienes cuenta? Regístrate aquí</a>
+                </div>
+                    <article class="descripcion">
+                        
+                        <p><i class="fas fa-info-circle"></i>Mapa interactivo + IA para analizar riesgos de inundación en la Región Hidrológica
+                            Tuxpan–Nautla, Veracruz.</p>
+                        <ul class="features">
+                            <li>Capas ambientales</li>
+                            <li>Asistente IA especializado</li>
+                            <li>Análisis por cuencas o por región</li>
+                        </ul>
+                    </article>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://kit.fontawesome.com/066f01d293.js" crossorigin="anonymous"></script>
+</html>

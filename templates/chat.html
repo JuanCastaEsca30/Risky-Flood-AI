@@ -1,0 +1,104 @@
+<!--
+Aquí va el código de la estructura del chat y el mapa en donde se mostrará información de riesgos
+tal vez se pueda agregar un dashboard con info. *Revisar*
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiskyFlood AI</title>
+    <!--código para css de leaflet obtenido de la página
+    https://leafletjs.com/
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/> <!--código para leafletjs-->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}"> <!--modificar a la ruta del css chat-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+     <!--código para js de leaflet obtenido de la página
+    https://leafletjs.com/
+    -->
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script><!--esto debe ir siempre después del leaflet's css-->
+    
+</head>
+<body>
+    
+    <!-- ===== Aquí irá el chat ===== --> 
+    <div id= "chatbot" class="chatbot">
+        <div class="chat-container">
+        <!-- Header del chat -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-title">
+                    <h3>{{ name }}</h3>
+                    <span class="status">En línea</span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button id="resetButton" class="action-btn" title="Reiniciar chat">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button id="closeButton" class="action-btn" title="Cerrar chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+            <!-- Cuerpo del chat -->   
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                <div class="message-content">
+                        <!-- Cambiar el nombre del name al nombre de nuestra IA, pensar en el nombre--> 
+                    <p>¡Hola! Soy {{ name }}. Estoy aquí para informarte sobre la hidrología y riesgos por inundaciones de la Región Hidrológica Tuxpan-Nautla .</p>
+                </div>
+                <span class="message-time">Ahora</span>
+            </div>
+        </div>
+
+            <!-- Footer del chat -->   
+        <div class="chat-footer">
+            <form id="chatForm">
+                <div class="input-container">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Escribe tu mensaje..." 
+                        rows="1"
+                        maxlength="500"
+                    ></textarea>
+                    <button type="submit" id="sendButton" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+        <!-- ==== Código del mapa ==== --> 
+    <div class = mapa id="mapa">
+        <!-- ==== Menu despleglable que irá dentro del mapa  ==== --> 
+        <div id="menuToggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="layerPanel" class="layer-panel">
+            <div class="panel-header">
+                <h3>Capas del mapa</h3>
+                <button id="closePanel" class="close-btn">&times;</button>
+            </div>
+        </div>
+</div>
+    
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
