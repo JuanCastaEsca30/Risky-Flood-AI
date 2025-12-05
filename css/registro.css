@@ -1,0 +1,249 @@
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    background: linear-gradient(135deg,  #9a63ff, #d8c6df, #7e41ff);
+    position:fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    background-color: #0f6fff23;
+    border: 2px solid white;
+    height: 300px;
+    width: 200px;
+    border-radius: 12px;
+    color: #000000;
+    box-shadow: -3px -3px #91C9FF inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-container{
+    position: absolute;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 88%;
+    top:5rem;
+    left: 4.8rem;
+}
+
+.side-bar{
+    flex:1;
+    color: #252525;
+    background: rgb(240, 239, 240);
+    width: 50%;
+    border-radius: 15px 0px 0px 15px;
+    background-image: url("mapa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.descripcion{
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    color: rgb(240, 239, 240);
+    font-size: 1.5rem;
+}
+
+.descripcion p{
+    margin-bottom: 2%;
+}
+
+.descripcion li{
+    margin-left: 2%;
+    padding: 0.5%;
+}
+
+.login-container{
+    flex:1;
+    padding: 20px;
+    background-color: #555555;
+    z-index: 10;
+    border-radius: 0px 15px 15px 0px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 1rem !important;
+}
+
+.login-container h1{
+    padding: 15px;
+    color: aliceblue;
+    background:  #555555;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 2.4rem;
+    
+}
+
+.login-container .titulo{
+    padding: 15px;
+    color: aliceblue;
+    background:  #555555;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.login-container h2{
+    padding: 0px;
+    color: aliceblue;
+    background:  #555555;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.login-box{
+    border-radius: 10px;
+    background-color: #555555;
+    border: 30px solid rgba(12 170, 12, alpha);
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.input-group label{
+    font-weight: 600;
+    padding: 2px;
+    color: rgb(240, 239, 240);
+    margin-left: 5%;
+}
+
+.label-login{
+    font-size: 1.5rem;
+}
+
+.input-group input{
+    border-radius: 5px;
+    border: solid 3px rgb(240, 239, 240);
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #252525;
+    color: rgb(240, 239, 240);
+    width: 80%;
+    margin-left:5%;
+}
+
+.input-group input:focus{
+    border-color:#7441ff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.input-group select{
+    border-radius: 5px;
+    border: solid 3px rgb(240, 239, 240);
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #252525;
+    color: rgb(240, 239, 240);
+    width: 85%;
+    margin-left:5%;
+}
+
+.input-group select:focus{
+    border-color:#7441ff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.btn-login{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: rgb(240, 239, 240);
+    border:3px solid #ffffff48;
+    background-color: #0f6fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 85%;
+    padding: 20px;
+    margin-left:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.25rem;
+}
+
+.btn-login:hover{
+    background-color: #0f6fffea;
+}
+
+.informacion{
+    position: static;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.informacion p{
+    border-radius: 10px;
+    background-color: rgb(240, 239, 240);
+}
+.login-box {
+    padding-bottom: 60px;
+}  
+
+.login-box a{
+    color: rgb(240, 239, 240);
+}
+
+.cuenta-existente{
+    background-color: #ff2b0f;
+    border-radius: 8px;
+    color: rgb(240, 239, 240);
+    font-size: 1rem;
+    font-weight: normal;  
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.input-column{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.5%;
+}
+
+.input-column .input-group{
+    flex: 1;
+    width: 100%;
+}
+
+.input-column .input-group input{
+    width: 60%;
+}
+
+.input-column .input-group select{
+    width: 55%;
+}
