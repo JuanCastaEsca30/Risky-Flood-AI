@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------------------------------------
+Conversión de archivos BSON a GEOJSON
+https://www.mongodb.com/es/resources/basics/json-and-bson
+
+--Formato MongoDB--
+{
+  "_id": "65a1b2c3d4e5f67890123456",
+  "nombre": "Río Nautla", 
+  "tipo": "corriente",
+  "longitud_km": 125,
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [[-97.5, 20.4], [-97.6, 20.3], ...]
+  }
+}
+
+--FormatoGeoJson que necesita Leaflet
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "65a1b2c3d4e5f67890123456",
+      "properties": {
+        "nombre": "Río Nautla",
+        "tipo": "corriente", 
+        "longitud_km": 125
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-97.5, 20.4], [-97.6, 20.3], ...]
+      }
+    }
+  ]
+}
+
+Conexion LLM con GEOJSON ejemplos
+
+-- https://developer.dataiku.com/latest/tutorials/genai/agents-and-tools/json-output/index.html
+map_story -- https://arxiv.org/html/2505.21966v1#bib

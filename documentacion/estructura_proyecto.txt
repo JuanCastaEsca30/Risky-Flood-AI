@@ -1,0 +1,41 @@
+riskyflood/
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py 
+│   │   ├── # Carpeta con las rutas de FLASK
+│   │   ├── # Carpeta con los modelos/
+│   │   │   └── p/e: Modelo de riesgo
+│   │   └── # Carpeta para los servicios/
+│   │       └── Integración de Ollama
+│   ├── run.py
+│   ├── requisitos.txt *Dependencias
+│   └── env
+├── frontend/
+│   ├── templates/
+│   │   ├── login.html
+│   │   ├── home.html
+│   │   ├── chat-html
+│   │   └── nesting.
+│   └── Assets/
+│       ├── css/
+│       │   ├── login.css
+│       │   ├── home.css
+│       │   └── chat.css
+│       ├── js/
+│       │   ├── login.js
+│       │   ├── home.js
+│       │   └── chat.js
+│       ├── data/
+│       │   ├── geojson
+│       │   ├── cvs
+│       │   └── documentos (pdfs)
+│       └── imgs
+├── documentacion/
+│   ├── Actividades_proyecto.xlsx
+│   └── estuctura_proyecto.txt
+├── IA/
+│   └── IA_prueba.ipynb # pruebas que se harán con la ia
+├── README.md
+└── LICENSE
+
+Creado en: https://tree.nathanfriend.com/
