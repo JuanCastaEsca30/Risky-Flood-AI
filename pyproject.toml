@@ -1,0 +1,20 @@
+[project]
+name = "riskyflood-backend"
+version = "0.1.0"
+description = "Backend del proyecto RiskyFlood, con soporte para datos espaciales"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "flask>=3.1.2",
+    "flask-sqlalchemy>=3.1.1",
+    "geoalchemy2>=0.15.1",
+    "psycopg2-binary>=2.9.9",
+    "gradio>=5.49.1",
+    "groq>=0.32.0",
+    "ollama>=0.6.1",
+    "openai>=2.3.0",
+    "pymongo>=4.15.4",
+    "pymysql>=1.1.2",
+    "pypdf>=6.1.1",
+]
